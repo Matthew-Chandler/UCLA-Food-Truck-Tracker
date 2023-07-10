@@ -1,0 +1,61 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  #foodTruckButtons {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #foodTruckButtons button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #foodTruckButtons button:hover {
+    background-color: #45a049;
+  }
+  
+  #scheduleContainer {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #scheduleTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #scheduleTable th,
+  #scheduleTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #scheduleTable th:first-child,
+  #scheduleTable td:first-child {
+    width: 50%;
+  }
+  
+  #scheduleTable th:last-child,
+  #scheduleTable td:last-child {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  

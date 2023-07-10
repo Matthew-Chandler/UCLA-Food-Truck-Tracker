@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Food Trucks for the Day</title>
-  <style>
-    table {
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 8px;
-      border: 1px solid black;
-    }
-  </style>
+  <title>Food Truck Schedule</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-  <h1>Food Trucks for the Day</h1>
-  <table id="foodTrucksTable">
-    <tr>
-      <th>Mealtime</th>
-      <th>Food Trucks</th>
-    </tr>
-  </table>
+  <h1 id="foodTruckHeading">Food Truck Schedule</h1>
 
-  <script src="script.js"></script>
+  <div id="foodTruckButtons">
+    <h2>Select a Food Truck:</h2>
+    <button id="searchAllButton">Show All</button>
+  </div>
+
+  <div id="scheduleContainer">
+    <h2 id="scheduleHeading"></h2>
+    <table id="scheduleTable">
+      <tr>
+        <th>Location</th>
+        <th>Period</th>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
