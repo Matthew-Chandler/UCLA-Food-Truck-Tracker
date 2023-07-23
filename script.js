@@ -1,17 +1,15 @@
-$(document).ready(function() {
-    $('#searchAllButton').click(function() {
-      getFoodTruckSchedule(null);
-      updateScheduleHeading("Schedule");
-    });
-  
+$(document).ready(function() {  
+    // Retrieve and populate the food truck list on page load
     getFoodTruckList();
   });
   
   function getFoodTruckList() {
-    var url = 'https://historical-reliable-fennel.glitch.me/';
+    var url = 'test/';
   
+    // Fetch data from the URL
     $.get(url, function(data) {
       var foodTrucks = [];
+      // Extract unique food truck names from the data
       $(data).find('.hours-additonal').each(function() {
         var foodTruck = $(this).text().trim();
         if (!foodTrucks.includes(foodTruck)) {
@@ -22,8 +20,11 @@ $(document).ready(function() {
       var foodTruckButtons = $('#foodTruckButtons');
       foodTruckButtons.find('button').remove(); // Clear previous buttons
   
+      // Create buttons for each food truck
       $.each(foodTrucks, function(index, foodTruck) {
         var button = $('<button></button>').text(foodTruck);
+        // Add click event handler to fetch schedule for the selected food truck
+        // and update the schedule heading
         button.click(function() {
           getFoodTruckSchedule(foodTruck);
           updateScheduleHeading(foodTruck);
@@ -34,8 +35,9 @@ $(document).ready(function() {
   }
   
   function getFoodTruckSchedule(foodTruckName) {
-    var url = 'https://historical-reliable-fennel.glitch.me/';
+    var url = 'test/';
   
+    // Fetch data from the URL
     $.get(url, function(data) {
       var scheduleTable = $('#scheduleTable');
       scheduleTable.find('tr:gt(0)').remove(); // Clear previous search results
